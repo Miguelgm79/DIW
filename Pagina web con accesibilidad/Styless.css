@@ -1,0 +1,277 @@
+/* Cabecera */
+.header {
+    background: rgba(0, 0, 0, 0.8);
+    color: white; /* Cambiado a blanco para mejor contraste */
+    padding: 2rem 0;
+    position: fixed;
+    right: 0;
+    left: 0;
+    top: 0;
+    z-index: 1000;
+}
+
+.header a {
+    color: white; /* Cambiado a blanco para mejor contraste */
+    text-decoration: none;
+}
+
+.logo-nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    letter-spacing: 15px;
+    font-size: 1.2em;
+}
+
+.navigation ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.navigation ul li {
+    display: inline-block;
+}
+
+.navigation ul li a {
+    display: block;
+    padding: 0.5rem 1rem;
+    transition: all 0.4s linear;
+    border-radius: 10px;
+}
+
+.navigation ul li a:hover,
+.navigation ul li a:focus {
+    background: #a0a083;
+    outline: none;
+}
+
+/* Submenú */
+.navigation ul li {
+    position: relative;
+}
+
+.submenu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: rgba(0, 0, 0, 0.8);
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    border-radius: 15px;
+    min-width: 150px;
+}
+
+.submenu li {
+    display: block;
+}
+
+.submenu li a {
+    display: block;
+    padding: 0.5rem 1rem;
+    color: white;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.submenu li a:hover,
+.submenu li a:focus {
+    background: #a0a083;
+    outline: none;
+}
+
+.navigation ul li:hover .submenu,
+.navigation ul li:focus-within .submenu {
+    display: block;
+}
+
+/* Ajuste para evitar que la cabecera tape las secciones */
+section h2::before {
+    display: block;
+    content: "";
+    height: 200px;
+    margin-top: -100px;
+    visibility: hidden;
+}
+
+/* Descripción */
+.container {
+    padding: 2rem;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.9);
+    width: 85%;
+    max-width: 850px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
+}
+
+.main {
+    padding-top: 10rem;
+    position: relative;
+    z-index: 1;
+}
+
+body {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: #333;
+    font-size: 1rem;
+    line-height: 1.8em;
+    margin: 0;
+    background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSIVqntoAvazeXv8iq1riyX1UNRMjquojJPNg&s');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    opacity: 0.9;
+}
+
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.5);
+    z-index: -1;
+}
+
+h1 {
+    font-size: 1.5rem;
+    line-height: 1.3em;
+}
+
+h3 {
+    font-size: 1.3rem;
+    color: #333;
+    margin-top: 1.5em;
+}
+
+p {
+    margin-bottom: 1.6em;
+}
+
+#fotoRedonda {
+    width: 250px;
+    height: 150px;
+    border-radius: 25%;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Botón de enviar la solicitud de la reserva */
+.Reservar {
+    padding: 2rem;
+    border-radius: 15px;
+    background: rgba(255, 255, 255, 0.9);
+    max-width: 600px;
+    margin: 160px auto 50px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    border: none;
+}
+
+fieldset {
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 20px;
+    background-color: rgba(255, 255, 255, 0.7);
+}
+
+legend {
+    background-color: #3f3f35;
+    color: white;
+    padding: 5px 15px;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+table {
+    width: 100%;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="date"],
+input[type="number"],
+input[type="time"] {
+    width: 90%;
+    padding: 10px;
+    margin: 5px 0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="tel"]:focus,
+input[type="date"]:focus,
+input[type="number"]:focus,
+input[type="time"]:focus {
+    border-color: #E1306C;
+    outline: none;
+    box-shadow: 0 0 5px rgba(225, 48, 108, 0.5);
+}
+
+label {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+#enviar_solicitud {
+    cursor: pointer;
+    width: 150px;
+    height: 45px;
+    border-radius: 25px;
+    background: #E1306C;
+    color: white;
+    border: none;
+    font-size: 1.1rem;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    display: block;
+    margin: 20px auto 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+#enviar_solicitud:hover,
+#enviar_solicitud:focus {
+    background: #c62e61;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+    outline: none;
+}
+
+/* Pie de página */
+.footer {
+    background: #f2f2f2;
+    padding: 4rem 0;
+    text-align: center;
+    margin-top: 5rem;
+    position: relative;
+    z-index: 1;
+}
+
+#RedesI, #RedesF {
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    transition: transform 0.3s ease;
+}
+
+#RedesI:hover, #RedesI:focus,
+#RedesF:hover, #RedesF:focus {
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+    transform: scale(1.1);
+    outline: none;
+}

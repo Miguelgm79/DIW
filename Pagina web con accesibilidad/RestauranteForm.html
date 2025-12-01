@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reservar - Bel Mondo</title>
+    <link rel="stylesheet" href="Styless.css">
+</head>
+<body>
+    <header class="header">
+        <div class="logo-nav-container">
+            <h1 class="logo">Bel Mondo</h1>
+            <nav class="navigation" role="navigation">
+                <ul>
+                    <li><a href="MainRestaurante.html">Inicio</a></li>
+                    <li><a href="RestauranteForm.html">Reservar</a></li>
+                    <li>
+                        <a href="RestauranteMenu.html" aria-haspopup="true" aria-expanded="false">Menú</a>
+                        <ul class="submenu">
+                            <li><a href="RestauranteMenu.html#entrantes">Entrantes</a></li>
+                            <li><a href="RestauranteMenu.html#pizzas">Pizzas</a></li>
+                            <li><a href="RestauranteMenu.html#postres">Postres</a></li>
+                            <li><a href="RestauranteMenu.html#bebidas">Bebidas</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="main">
+        <div class="container">
+            <form class="Reservar" action="submit_reserva.php" method="post">
+                <fieldset>
+                    <legend>Datos personales</legend>
+                    <table>
+                        <tr>
+                            <td><label for="nombre">Nombre</label></td>
+                            <td><input type="text" id="nombre" name="nombre" aria-required="true" required></td>
+                        </tr>
+                        <tr>
+                            <td><label for="apellidos">Apellidos</label></td>
+                            <td><input type="text" id="apellidos" name="apellidos" aria-required="true" required></td>
+                        </tr>
+                        <tr>
+                            <td><label for="email">e-Mail</label></td>
+                            <td><input type="email" id="email" name="email" aria-required="true" required></td>
+                        </tr>
+                        <tr>
+                            <td><label for="telefono">Teléfono</label></td>
+                            <td><input type="tel" id="telefono" name="telefono"></td>
+                        </tr>
+                    </table>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Reserva</legend>
+                    <table>
+                        <tr>
+                            <td><label for="fecha">Fecha de la reserva:</label></td>
+                            <td><input type="date" id="fecha" name="fecha" aria-required="true" required></td>
+                        </tr>
+                        <tr>
+                            <td><label for="personas">Número de personas:</label></td>
+                            <td><input type="number" id="personas" name="personas" min="1" aria-required="true" required></td>
+                        </tr>
+                        <tr>
+                            <td><label for="hora">Hora de la reserva:</label></td>
+                            <td><input type="time" id="hora" name="hora" aria-required="true" required></td>
+                        </tr>
+                    </table>
+                </fieldset>
+
+                <button type="submit" id="enviar_solicitud">Reservar ahora</button>
+            </form>
+        </div>
+    </main>
+</body>
+</html>
