@@ -3,6 +3,7 @@ body {
     background-color: bisque;
 }
 
+
 header {
     color: white;
     text-align: center;
@@ -30,6 +31,10 @@ header {
 .navbar .logo img {
     height: 40px; /* ajusta tamaño del trébol */
     width: auto;
+}
+
+.navbar .logo a {
+    padding-top: 20px;
 }
 
 .navbar ul {
@@ -70,7 +75,7 @@ h2, h1, h3 {
 /* Galeria */
 .galeria {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    grid-template-columns: repeat(8, 1fr);
     gap: 12px;
     margin-top: 15px;
 }
@@ -118,16 +123,16 @@ h2, h1, h3 {
 .cristo-texto,
 .cristo-imagen {
     flex: 1;
-    text-align: center;
+    text-align: left;
 }
 
 .cristo-imagen img {
-    justify-content: flex-end;
-    width: 50%;
-    height: auto;
-    border-radius: 10px;
-    object-fit: cover;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.25);
+     width: 100%;
+  max-width: 450px;
+  height: auto;
+  border-radius: 10px;
+  object-fit: cover;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.25);
 }
 
 footer {
@@ -149,35 +154,30 @@ footer .logo2 img {
 }
 
 /*Responsive*/
-@media (max-width: 900px) {
-    body{
-        margin: 10%;
-    }
+@media (max-width: 980px) {
+  body {
+    padding-top: 90px;
+  }
 
-    .navbar {
-        width: 89%;
-    }
-    main {
-        max-width: 95%;
-        margin: 15px auto;
-    }
+  .galeria {
+    grid-template-columns: repeat(2, 1fr);
+  }
 
-    .cristo-layout {
-        order: 0
-       
-    }
-
+  /* Cristo: texto a la derecha de la imagen */
+  .cristo-layout {
+    flex-direction: row-reverse;
+  }
 }
 
 /* Navbar y secciones en móvil */
 @media (max-width: 700px) {
     body {
-        padding-top: 90px; /* más espacio porque la navbar crecerá */
+        padding-top: 150px; /* más espacio porque la navbar crecerá */
     }
 
     .navbar {
         flex-direction: row;
-        align-items: center;
+        align-items: left;
         gap: 8px;
         padding: 45px;
     }
@@ -194,8 +194,8 @@ footer .logo2 img {
         font-size: 2.2rem;
     }
 
-    .galeria img {
-        height: 200px;
+    .galeria{
+        grid-template-columns: 1Fr;
     }
 
     .grid-contenedor {
